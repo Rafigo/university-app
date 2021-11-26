@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Auth0Provider } from '@auth0/auth0-react';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './styles/index.scss';
+
+/* <Auth0Provider
+    domain="dev-ez3iwtzi.eu.auth0.com"
+    clientId="HTTS6VQujf9UaCjMuvfSBwwWAaGGkwNI"
+    redirectUri={window.location.origin}
+  > </Auth0Provider> */
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
