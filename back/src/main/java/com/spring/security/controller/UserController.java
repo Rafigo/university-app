@@ -1,6 +1,7 @@
 package com.spring.security.controller;
 
 import com.spring.security.entity.User;
+import com.spring.security.exception.UserExistsException;
 import com.spring.security.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public void register(@RequestBody final User user) {
+    public void register(@RequestBody final User user) throws UserExistsException {
         userService.register(user);
     }
 

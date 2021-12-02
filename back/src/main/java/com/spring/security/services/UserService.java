@@ -1,6 +1,7 @@
 package com.spring.security.services;
 
 import com.spring.security.entity.User;
+import com.spring.security.exception.UserExistsException;
 
 /**
  * Interface of the User Service.
@@ -12,5 +13,5 @@ public interface UserService {
      *
      * @param user new user that must be added to the database.
      */
-    void register(final User user);
+    void register(final User user) throws UserExistsException;
 }
